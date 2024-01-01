@@ -6,7 +6,7 @@ FROM pytorch/pytorch:2.1.1-cuda10.2-cudnn7-runtime
 
 # sets the working directory inside the container to /app
 WORKDIR /app
-
+COPY ..
 # creates a seperate stage for installing dependencies efficiently
 FROM base AS deps
 
@@ -14,13 +14,9 @@ FROM base AS deps
 RUN git clone https://github.com/Blink/<kunal1704>.git
 
 # To copy all requirements and install them from the requirements.txt file
-WORKDIR /app
 RUN pip install -r requirements.txt
 
 FROM base
-# Copy only necessary files
-COPY --from=deps /app/<ToufeeqSK> /app 
-COPY Resnet_Face_Recognition.pt /app/model.pt   
 
 # Exposes the port
 EXPOSE 8080
