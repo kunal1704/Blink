@@ -11,7 +11,7 @@ WORKDIR /app
 FROM base AS deps
 
 #Cloning repo
-RUN git clone https://github.com/Primus/<ToufeeqSK>.git
+RUN git clone https://github.com/Blink/<kunal1704>.git
 
 # To copy all requirements and install them from the requirements.txt file
 WORKDIR /app/<ToufeeqSK>
