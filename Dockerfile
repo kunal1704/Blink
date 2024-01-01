@@ -14,7 +14,7 @@ FROM base AS deps
 RUN git clone https://github.com/Blink/<kunal1704>.git
 
 # To copy all requirements and install them from the requirements.txt file
-WORKDIR /app/<ToufeeqSK>
+WORKDIR /app
 RUN pip install -r requirements.txt
 
 FROM base
